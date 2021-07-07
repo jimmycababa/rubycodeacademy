@@ -31,3 +31,12 @@ state = gets.chomp.upcase
 state.upcase!
 
 puts "Your first name is #{first_name} and your last name is #{last_name}. You are from #{city}, #{state}."
+
+<!-- using the unless statement -->
+hungry = false
+
+unless hungry
+  puts "I'm writing Ruby programs!"
+else
+  puts "Time to eat!"
+end
