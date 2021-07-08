@@ -40,3 +40,15 @@ unless hungry
 else
   puts "Time to eat!"
 end
+
+<!-- if else statement with user input -->
+
+print "Pleathe enter a thtring: " 
+user_input = gets.chomp
+user_input.downcase!
+
+if user_input.include? "s"
+  user_input.gsub!(/s/, 'th')
+else "you did it with no s!"
+puts "your new phrase is #{user_input}"
+end
