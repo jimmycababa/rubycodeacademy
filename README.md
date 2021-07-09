@@ -88,3 +88,24 @@ odds.each do |item|
 item *= 2
 print "#{item}"
 end
+
+<!-- .split takes in string and returns an array. if we pass it a bit of text in parentheses it will divide the string wherever it sees that bit of text, called a delimiter. -->
+<!-- this example of split will take the string text and split it whenever it sees a comma -->
+text.split(",)  
+
+
+puts "enter something"
+text = gets.chomp
+
+puts "enter words to be redacted"
+redact = gets.chomp
+
+words = text.split(" ")
+
+words.each { |letter|
+if letter == redact
+print "REDACTED "
+else
+print letter + " "
+
+end}
