@@ -112,3 +112,13 @@ end}
 
 <!-- multidimensional array. this one is a 2 dimensional array -->
 my_2d_array = [["hi"],["there"],["fartface]]
+
+<!-- accessing hash values -->
+pets = Hash.new
+pets["wynter"] = 'dog'
+
+puts pets["wynter"]
+
+<!-- iterating over an array with each -->
+languages = ["HTML", "CSS", "JavaScript", "Python", "Ruby"]
+languages.each{ |butt| puts butt}
