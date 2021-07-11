@@ -119,6 +119,26 @@ pets["wynter"] = 'dog'
 
 puts pets["wynter"]
 
-<!-- iterating over an array with each -->
+<!-- iterating over an array with each. It is saying that we take this array and for each element, print it to the console. -->
 languages = ["HTML", "CSS", "JavaScript", "Python", "Ruby"]
 languages.each{ |butt| puts butt}
+
+<!-- we want to iterate over s in such a way that we don't print out each elemenet as an array, but each element as a sub array. so we iterate through .each element in the array (sub_array). then we iterate through .each sub_array and puts out their items-->
+s = [["ham", "swiss"], ["turkey", "cheddar"], ["roast beef", "gruyere"]]
+s.each do  |sub_array| sub_array.each do |x| puts x
+end
+end
+
+<!-- iterating over hashes -->
+<!-- use .each to iterate over the hash. use puts to print each key-value pair, separated by a colon and a space. -->
+secret_identities = {
+  "The Batman" => "Bruce Wayne",
+  "Superman" => "Clark Kent",
+  "Wonder Woman" => "Diana Prince",
+  "Freakazoid" => "Dexter Douglas"
+}
+  secret_identities.each do |hero, normal|
+  puts "#{hero}: #{normal}"
+  end
+
+  
