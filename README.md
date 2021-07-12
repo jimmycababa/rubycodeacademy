@@ -141,4 +141,25 @@ secret_identities = {
   puts "#{hero}: #{normal}"
   end
 
-  
+  <!-- example of a histogram -->
+  puts "Enter a phrase you'd like to analyze: "
+text = gets.chomp
+
+words = text.split
+
+frequencies = Hash.new(0)
+
+words.each { |word| frequencies[word] += 1 }
+
+frequencies = frequencies.sort_by do |word, count|
+  count
+end
+
+frequencies.reverse!
+
+frequencies.each do |word, count|
+  puts word + " " + count.to_s
+end
+
+<!-- friends here has a splat argument, which means that the method can receive on or more arguments -->
+def what_up(greeting, *friends)
