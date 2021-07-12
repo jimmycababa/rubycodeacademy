@@ -163,3 +163,13 @@ end
 
 <!-- friends here has a splat argument, which means that the method can receive on or more arguments -->
 def what_up(greeting, *friends)
+
+<!-- Add a block after .each that multiplies each item by itself and puts the result to the console. -->
+my_array = [1, 2, 3, 4, 5]
+my_array.each do |num| puts num * num
+end
+
+<!-- Use .sort! to sort the fruits array in descending (that is, reverse) alphabetical order. -->
+fruits = ["orange", "apple", "banana", "pear", "grapes"]
+fruits.sort! do |firstFruit, secondFruit| secondFruit <=> firstFruit
+end
