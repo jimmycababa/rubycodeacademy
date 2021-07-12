@@ -189,3 +189,27 @@ end
 
 numbers = [1, 3, 5]
 puts alphabetize(numbers)
+
+<!-- symbols are not strings.  -->
+<!-- create a new variable symbols, and store an empty array in it. Use .each to iterate over the strings array. For each s in strings, use .to_sym to convert s to a symbol and use .push  to add that new symbol to symbols. print the symbols array -->
+symbols = []
+strings.each do |s| 
+if s == strings
+symbols.push(s.to_sym)
+end
+end
+print symbols
+
+<!-- Go ahead and print out just the titles of our movies using puts.(hint: use the .select method) -->
+movie_ratings = {
+  memento: 3,
+  primer: 3.5,
+  the_matrix: 3,
+  truman_show: 4,
+  red_dawn: 1.5,
+  skyfall: 4,
+  alex_cross: 2,
+  uhf: 1,
+  lion_king: 3.5
+}
+puts movie_ratings.select { |movie, rating| puts movie}
