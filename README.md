@@ -173,3 +173,19 @@ end
 fruits = ["orange", "apple", "banana", "pear", "grapes"]
 fruits.sort! do |firstFruit, secondFruit| secondFruit <=> firstFruit
 end
+
+<!-- After your .sort! call, add an if-else statement. If rev is true, call reverse! on arr, else return arr.
+
+Keep your numbers array and the puts statement so that you can see your work in action! -->
+def alphabetize(arr, rev = false)
+arr.sort!
+
+if rev == true
+ arr.reverse!
+else
+ arr
+end
+end
+
+numbers = [1, 3, 5]
+puts alphabetize(numbers)
