@@ -307,3 +307,21 @@ end
 
 <!-- conditional assignment example -->
 favorite_animal ||= "tiger"
+
+<!-- Use .times and a block to puts the string "I'm a block!" five times -->
+5.times do |x|
+puts "I'm a block!"
+end
+
+<!-- yield example -->
+def yield_name(name)
+  puts "In the method! Let's yield."
+  yield("Kim")
+  puts "In between the yields!"
+  yield(name)
+  puts "Block complete! Back in the method."
+end
+
+yield_name("Eric") { |n| puts "My name is #{n}." }
+
+yield_name("jimmy") { |n| puts "My name is #{n}!"}
