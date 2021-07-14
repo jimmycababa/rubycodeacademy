@@ -214,6 +214,26 @@ movie_ratings = {
 }
 puts movie_ratings.select { |movie, rating| puts movie}
 
+<!-- sample case statement -->
+
+puts "What's your favorite language?"
+language = gets.chomp
+
+case language 
+when "Ruby"
+  puts "Ruby is great for web apps!"
+when "Python"
+  puts "Python is great for science."
+when "JavaScript"
+  puts "JavaScript makes websites awesome."
+when "HTML"
+  puts "HTML is what websites are made of!"
+when "CSS"
+  puts "CSS makes websites pretty."
+else
+  puts "I don't know that language!"
+end
+
 <!-- a night at the movies code example -->
 movies = {
   Memento: 3,
@@ -267,3 +287,23 @@ when 'delete'
 else
   puts "Sorry, I didn't understand you."
 end
+
+<!-- one line if statements -->
+puts "I love love" if true
+
+puts 1 < 2? "One is less than two!" : "One is not less than two."
+
+<!--  Write a loop that only puts the even values of my_array. (Bonus points if you use a one-line if!) -->
+my_array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+my_array.each do |x| puts x % 2 == 0? x : nil
+end
+
+<!-- Use .upto to puts the capital letters "L" through "P".
+
+(Make sure to use puts and not print, so each letter is on its own line!) -->
+"L".upto("P") do |letter| puts letter
+end
+
+<!-- conditional assignment example -->
+favorite_animal ||= "tiger"
