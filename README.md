@@ -325,3 +325,36 @@ end
 yield_name("Eric") { |n| puts "My name is #{n}." }
 
 yield_name("jimmy") { |n| puts "My name is #{n}!"}
+
+<!-- PROC example -->
+round_down = Proc.new do |x| x.floor
+
+<!-- Proc with .call -->
+hi = Proc.new { puts "Hello!"}
+hi.call
+
+<!-- We have an array of strings in the editor, but we want an array of symbols. create a new variable called symbolize. In symbolize, store a lambda that takes one parameter and calls .to_sym on that parameter.
+
+We then use symbolize with the .collect method to convert the items in strings to symbols! -->
+strings = ["leonardo", "donatello", "raphael", "michaelangelo"]
+# Write your code below this line!
+symbolize = lambda { |x| x.to_sym}
+# Write your code above this line!
+symbols = strings.collect(&symbolize)
+print symbols
+
+<!-- lambda example -->
+symbolize = lambda { |x| x.to_sym}
+
+<!-- Create a lambda, symbol_filter, that takes one parameter and checks to see if that parameter .is_a? Symbol.
+
+Create a new variable called symbols, and store the result of calling my_array.select and passing it your lambda.
+
+puts symbols at the end of the file in order to see the final contents of the array.  -->
+
+my_array = ["raindrops", :kettles, "whiskers", :mittens, :packages]
+
+# Add your code below!
+symbol_filter = lambda { |x| x.is_a? Symbol }
+symbols = my_array.select(&symbol_filter)
+puts symbols
