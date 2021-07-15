@@ -358,3 +358,102 @@ my_array = ["raindrops", :kettles, "whiskers", :mittens, :packages]
 symbol_filter = lambda { |x| x.is_a? Symbol }
 symbols = my_array.select(&symbol_filter)
 puts symbols
+
+
+<!-- class example -->
+class Language
+  def initialize(name, creator)
+    @name = name
+    @creator = creator
+  end
+	
+  def description
+    puts "I'm #{@name} and I was created by #{@creator}!"
+  end
+end
+
+ruby = Language.new("Ruby", "Yukihiro Matsumoto")
+python = Language.new("Python", "Guido van Rossum")
+javascript = Language.new("JavaScript", "Brendan Eich")
+
+ruby.description
+python.description
+javascript.description
+
+<!-- Inheritance example. here SuperBadError is inheriting display_error from ApplicationError -->
+class ApplicationError
+  def display_error
+    puts "Error! Error!"
+  end
+end
+
+class SuperBadError < ApplicationError
+end
+
+err = SuperBadError.new
+err.display_error
+
+
+<!-- example of using super keyword -->
+class Creature
+  def initialize(name)
+    @name = name
+  end
+  
+  def fight
+    return "Punch to the chops!"
+  end
+end
+
+# Add your code below!
+class Dragon < Creature
+def fight
+puts "Instead of breathing fire..."
+super
+end
+end
+
+<!-- output for above -->
+"Instead of breathing fire..."
+"Punch to the chops!"
+
+<!-- OOP example -->
+class Message
+@@messages_sent = 0
+def initialize(from, to)
+@from = from
+@to = to
+@@messages_sent += 1
+end
+end
+
+my_message = Message.new("butts", "faces")
+
+class Email < Message
+def initialize(from, to)
+super
+end
+end
+
+<!-- virtual computer -->
+class Computer
+  @@users = {}
+  def initialize(username, password)
+    @username = username
+    @password = password
+    @files = {}
+    @@users[username] = password
+  end
+  
+  def create(filename)
+    time = Time.now
+    @files[filename] = time
+    puts "#{filename} was created at #{time} by #{@username}. "
+  end
+  
+  def Computer.get_users
+    @@users
+   
+  end
+end
+my_computer = Computer.new("my shit", "othershit")
